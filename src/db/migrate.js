@@ -24,10 +24,11 @@ async function migrate() {
     console.log('Migration completed successfully.');
   } catch (error) {
     console.error('Migration failed:', error);
+    process.exitCode = 1;
   } finally {
     client.release();
     await pool.end();
-    process.exit();
+    process.exit(process.exitCode ?? 0);
   }
 }
 
