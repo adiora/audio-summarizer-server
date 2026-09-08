@@ -16,7 +16,7 @@ services:
   app:
     build: .
     ports:
-      - "127.0.0.1:54741:3000"
+      - "127.0.0.1:54741:54741"
     env_file:
       - .env
     depends_on:

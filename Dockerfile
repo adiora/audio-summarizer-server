@@ -9,5 +9,5 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 USER appuser
-EXPOSE 3000
+EXPOSE 54741
 CMD ["node", "src/index.js"]
